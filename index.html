@@ -1,77 +1,440 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+<head>
+<!--Shoutout to Jacob Stein for keeping it real-->
+<link rel="icon" href="https://d3qi0qp55mx5f5.cloudfront.net/www/i/misc/maroon-shield.png">
+<title>University of Chicago Go Club</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/swipebox.css">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+</style>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Go UChicago University of Chicago Club" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<!-- //js -->
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
 
-    <title>UChicago Go Club</title>
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smoth-scrolling-->
+</head>
+<body>
+	<!--baner-->
+	<div class="baner" id="home">
+		<div class="container">
+			<div class="logo">
+				<h1> <a href="index.html"> <span class="jlogo">Go</span></a> </h1>
+			</div>
+			<div class="baner-text">
+				<h2>University of Chicago Go Club</h2>
+			</div>
+		</div>
+	</div>
+	<!--//baner-->
+	<!--navigation-->
+	<div class="top-nav">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"> <span class="jlogo">J</span>udo </a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-center cl-effect-15">
+						<li><a href="#home" class="active scroll" data-hover="Home">Home</a></li>
+						<li><a href="#about" class="scroll" data-hover="About">About</a></li>
+						<li><a href="#team" class="scroll" data-hover="Resources">Resources</a></li>
+						<li><a href="#gallery" class="scroll" data-hover="Gallery">Gallery</a></li>
+						<li><a href="#news" class="scroll" data-hover="Schedule">Schedule</a></li>
+						<li><a href="#contact" class="scroll" data-hover="Contact">Contact</a></li>
+					</ul>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</nav>
+	</div>
+			<!-- script-for sticky-nav -->
+			<script>
+			$(document).ready(function() {
+				 var navoffeset=$(".top-nav").offset().top;
+				 $(window).scroll(function(){
+					var scrollpos=$(window).scrollTop();
+					if(scrollpos >=navoffeset){
+						$(".top-nav").addClass("fixed");
+					}else{
+						$(".top-nav").removeClass("fixed");
+					}
+				 });
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+			});
+			</script>
+			<!-- /script-for sticky-nav -->
+	<!--navigation-->
+	<!--about-->
+	<div class="about" id="about">
+		<div class="container">
+			<h3 class="title">Welcome!</h3>
+			<p>We are a club at the University of Chicago where you can play Go! UChicago Go club meets weekly to practice and learn strategy and skill. Practices are Wednesdays from 4-7 at Hutchinson Commons. </p>
+		</div>
+	</div>
+	<!--//about-->
+	<!--slid-->
+	<div class="slid" id="slid">
+		<div class="container">
+			<div class="slid-info">
+				<h4>Go has a history of 4000 years!</h4>
+				<p>Join us to play the game of go and learn about it's 4000 year history!
+				Click <a href="https://en.wikipedia.org/wiki/History_of_Go" style = "color:black"target = "_blank" > here </a> to read about go's history!</p>
+			</div>
+		</div>
+	</div>
+	<!--//about-->
+	<!--special-->
+	<div class="special">
+		<div class="container">
+			<div class="col-md-5 special-grids">
+				<h3 class="title">The Game of Go</h3>
+				<p> Go is an abstract strategy board game for two players, in which the aim is to surround more territory than the opponent.</p>
+				<h6>
+					<ul>
+						<li>A Two Player Strategy Game</li>
+						<li>Try to control more area than your opponent!</li>
+						<li>Easy to learn, impossible to master</li>
+						<li>Challenging and fun!</li>
+						<li>Requires reasoning and logic</li>
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/soon.css" rel="stylesheet">
+					</ul>
+				</h6>
 
+			</div>
+			<div class="col-md-7 special-grids">
+				<h3 class="title">A Short Video About Alpha-Go</h3>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe src="https://www.youtube.com/embed/g-dKXOlsf98" allowfullscreen> </iframe>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//special-->
+	<!--team-->
+	<div class="team" id="team">
+		<div class="container">
+			<h3 class="title">Helpful Links </h3>
+			<div class="team-grids">
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-left">
+						<h4>Kiseido Go Server</h4>
+						<p>KGS connects go players from around the world</p>
+					</div>
+					<div class="team-grid-right">
+						<a href="https://www.gokgs.com/" target = "_blank"><img src="images/img1.png" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-right aliquam">
+						<a href="http://senseis.xmp.net/" target = "_blank"><img src="images/img2.png" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="team-grid-left non">
+						<h4>Sensei's Library</h4>
+						<p>Contains helpful definitions of vocabulary</p>
+					</div>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="team-grids">
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-left">
+						<h4>American Go Association</h4>
+						<p>The US National go player's association</p>
+					</div>
+					<div class="team-grid-right">
+						<a href="http://www.usgo.org/" target = "_blank"><img src="images/img3.png" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-right aliquam">
+						<a href="http://www.gobase.org/" target = "_blank"><img src="images/img4.gif" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="team-grid-left non">
+						<h4>Go Base</h4>
+						<p>Hosts historical go games</p>
+					</div>
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="team-grids">
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-left">
+						<h4>Tygem</h4>
+						<p>Korean Go Server</p>
+					</div>
+					<div class="team-grid-right">
+						<a href="http://www.tygembaduk.com/" target = "_blank"><img src="images/img5.jpg" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-right aliquam">
+						<a href="http://101weiqi.com/" target = "_blank"><img src="images/img6.png" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="team-grid-left non">
+						<h4>101Weiqi</h4>
+						<p>Chinese resource for practicing life and death</p>
+					</div>
 
-  </head>
-  <!-- START BODY -->
-  <body class="nomobile">
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="team-grids">
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-left">
+						<h4>IGS</h4>
+						<p>Older Japanese Go Server</p>
+					</div>
+					<div class="team-grid-right">
+						<a href="http://pandanet-igs.com/communities/pandanet" target = "_blank"><img src="images/img7.png" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 team-grid">
+					<div class="team-grid-right aliquam">
+						<a href="https://www.reddit.com/r/baduk/" target = "_blank"><img HEIGHT="75" WIDTH="75" src="images/img8.png" alt=" " class="img-responsive" /></a>
+					</div>
+					<div class="team-grid-left non">
+						<h4>Go Subreddit</h4>
+						<p>Reddit community of go players</p>
+					</div>
 
-    <!-- START HEADER -->
-    <section id="header">
-        <div class="container">
-            <header>
-                <!-- HEADLINE -->
-                <h1 data-animated="GoIn"><b>UChicago Go Club</b> coming soon...</h1>
-            </header>
-            <!-- START TIMER -->
-            <div id="timer" data-animated="FadeIn">
-                <p id="message"></p>
-                <div id="days" class="timer_box"></div>
-                <div id="hours" class="timer_box"></div>
-                <div id="minutes" class="timer_box"></div>
-                <div id="seconds" class="timer_box"></div>
-            </div>
-            <!-- END TIMER -->
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//team-->
+	<!--gallery-->
+	<div class="gallery" id="gallery">
+		<div class="container">
+			<h3 class="title">Our Gallery</h3>
+			<div class="top-gallery">
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/g1.jpg" class="swipebox">
+						<img src="images/g1.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Vaccines cause<br> autism !</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/g2.jpg" class="swipebox">
+						<img src="images/g2.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Hillary is a <br> lizard person!</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/g3.jpg" class="swipebox">
+						<img src="images/g3.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>The CIA killed JFK!</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/g4.jpg" class="swipebox">
+						<img src="images/g4.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>The moon landing <br>was faked!</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/g5.jpg" class="swipebox">
+						<img src="images/g5.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Bush Did 9/11!</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<a href="images/g6.jpg" class="swipebox">
+						<img src="images/g6.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Jet fuel can't <br>melt steel beams!</h4>
+						</div>
+				   </a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<script src="js/jquery.swipebox.min.js"></script>
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
+		</div>
+	</div>
+	<!--//gallery-->
+	<!--news-->
+	<div class="news" id="news">
+		<div class="container">
+			<h3 class="title">Events and Schedule</h3>
+			<div class="col-md-6 news-grids">
+				<div class="news-grids-left">
+					<!-- <IMG HEIGHT="75" WIDTH="75"img src="images/img18.png" class="img-responsive" alt="/"> -->
+				</div>
+				<div class="news-grids-right">
+					<h5 style="color:white;"> February 22, 2017</h5>
+					<p>Come Play Go at Hutchinson Commons from 4-7!
+						 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 news-grids">
+				<div class="news-grids-left">
+					<!-- <IMG HEIGHT="75" WIDTH="75"img src="images/img18.png" class="img-responsive" alt="/"> -->
+				</div>
+				<div class="news-grids-right">
+					<h5 style="color:white;"> March 15, 2017</h5>
+					<p>Come Play Go at Hutchinson Commons from 4-7!
+						 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 news-grids">
+				<div class="news-grids-left">
+					<!-- <IMG HEIGHT="75" WIDTH="75"img src="images/img18.png" class="img-responsive" alt="/"> -->
+				</div>
+				<div class="news-grids-right">
+					<h5 style="color:white;"> March 22, 2017</h5>
+					<p>Come Play Go at Hutchinson Commons from 4-7!
+						 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-6 news-grids">
+				<div class="news-grids-left">
+					<!-- <IMG HEIGHT="75" WIDTH="75"img src="images/img18.png" class="img-responsive" alt="/"> -->
+				</div>
+				<div class="news-grids-right">
+					<h5 style="color:white;"> March 29, 2017</h5>
+					<p>Come Play Go at Hutchinson Commons from 4-7!
+						 </p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//news-->
 
-        </div>
-        <!-- LAYER OVER THE SLIDER TO MAKE THE WHITE TEXTE READABLE -->
-        <div id="layer"></div>
-        <!-- END LAYER -->
-        <!-- START SLIDER -->
-        <div id="slider" class="rev_slider">
-            <ul>
-              <li data-transition="slideleft" data-slotamount="1" data-thumb="assets/img/slider/1.jpg">
-                <img src="assets/img/slider/1.jpg">
-              </li>
-            </ul>
-        </div>
-        <!-- END SLIDER -->
-    </section>
-    <!-- END HEADER -->
-
-    <!-- Bootstrap core JavaScript
+	<div class="like">
+		<div class="container">
+			<h3 class="title">Stay connected with us</h3>
+			<div class="like-info">
+				<div class="col-md-3 like-grids center">
+					<a href="https://www.facebook.com/groups/892419820863503/" target="_blank">
+						<img src="images/icon1.png" alt=""/>
+					</a>
+					<p>Facebook</p>
+				</div>
+				<!-- <div class="col-md-3 like-grids">
+					<a href="#">
+						<img src="images/icon7.png" alt=""/>
+					</a>
+					<p>Google plus</p>
+				</div>
+				<div class="col-md-3 like-grids">
+					<a href="#">
+						<img src="images/icon5.png" alt=""/>
+					</a>
+					<p>Twitter</p>
+				</div>
+				<div class="col-md-3 like-grids">
+					<a href="#">
+						<img src="images/icon6.png" alt=""/>
+					</a>
+					<p>Pinterest</p>
+				</div> -->
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--contact-->
+	<div id="contact" class="contact">
+		<div class="container">
+			<h3 class="title">Where We Meet</h3>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCnstJtaQfGKvStqfJOaUf3JHYJsZDYCBo&q=Hutchinson+Commons,Chicago+Illinois" allowfullscreen></iframe>
+			</div>
+			<h3 class="title">Contact Us</h3>
+			<div class="col-md-8 contact-right">
+				<form>
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+					<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					<input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+					<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+					<input type="submit" value="Submit" >
+				</form>
+			</div>
+			<div class="col-md-4 contact-left">
+				<p>We'd love to hear from you about the wonderful game of Go!</p>
+				<ul>
+					<li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						5706 S. University Ave, Chicago, IL 60637
+					</li>
+					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						<a href="mailto:example@mail.com">mail@example.com</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//contact-->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<p> © 2015 University of Chicago Go Club . All rights reserved | Design by <a style="color:white" href="https://www.arjunrawal.me/" target="_blank">Arjun Rawal</a></p>
+		</div>
+	</div>
+	<!--//footer-->
+	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/soon/plugins.js"></script>
-    <script src="assets/js/soon/jquery.themepunch.revolution.min.js"></script>
-    <script src="assets/js/soon/custom.js"></script>
-  </body>
-  <!-- END BODY -->
+    <script src="js/bootstrap.js"></script>
+</body>
 </html>
