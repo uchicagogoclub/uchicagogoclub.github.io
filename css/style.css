@@ -448,8 +448,8 @@ h2.resp-accordion {
 .like-grids {
   background-color: #2C302F;
   margin: 0 32px;
-  width: 19%;
-  padding: 20px;
+  width: 16%;
+  padding: 10px;
 }
 .like-grids a {
   display: inline-block;
@@ -505,11 +505,11 @@ h2.resp-accordion {
 }
 .news-grids-left {
     float: left;
-	width: 30%;
+	width: 100%;
 }
 .news-grids-right {
     float: left;
-    width: 70%;
+    width: 100%;
 }
 .news-grids-left img {
     border-radius: 50%;
